@@ -6,10 +6,17 @@ import "./App.css";
 function App() {
   const [greetMsg, setGreetMsg] = useState("");
   const [name, setName] = useState("");
+  const [count, setCount] = useState(0);
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-    setGreetMsg(await invoke("greet", { name }));
+    // カウントを1増やす
+    setCount((prev) => prev + 1);
+    // Rust側で用意したtauri::commandの関数を呼び出す
+    const message1: string = await invoke("greet", { name });
+    const message2: string = await invoke("counter", { count });
+    // Rust側の関数の戻り値を表示させる
+    setGreetMsg(message1 + ", " + message2);
   }
 
   return (
