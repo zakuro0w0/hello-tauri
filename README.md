@@ -1,10 +1,12 @@
 # hello-tauri
 - tauriを動かしてみるリポジトリ
 
-## 公式
+## 参考リンク
 - [Prerequisites | Tauri Apps](https://tauri.app/v1/guides/getting-started/prerequisites)
 - [Install Rust](https://www.rust-lang.org/tools/install)
 - [nvm](https://github.com/nvm-sh/nvm)
+- [create-tauri-app](https://github.com/tauri-apps/create-tauri-app)
+- [はじめに｜Rust GUI の決定版！ Tauri を使ってクロスプラットフォームなデスクトップアプリを作ろう](https://zenn.dev/kumassy/books/6e518fe09a86b2/viewer/fd305b)
 
 ## 環境構築＠windows
 ### node.js
