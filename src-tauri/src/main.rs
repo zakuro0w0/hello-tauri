@@ -12,7 +12,15 @@ fn greet(name: &str) -> String {
 // tauri::commandを付けることでUI側に公開するコマンドとなる
 #[tauri::command]
 fn counter(count: i32) -> String {
-    format!("current count = {}", count)
+    let x = unsafe { hello_world_cpp() };
+    format!("current count = {}", count + x)
+}
+
+// C/C++で実装した関数を宣言する(名前が一致していること)
+extern "C" {
+    // C++で実装した関数
+    // C++のintはi32に相当する
+    fn hello_world_cpp() -> i32;
 }
 
 fn main() {
