@@ -13,6 +13,7 @@ function App() {
     // カウントを1増やす
     setCount((prev) => prev + 1);
     // Rust側で用意したtauri::commandの関数を呼び出す
+    // invoke()の第1引数に関数名、第2引数は関数の引数をオブジェクトとして渡す
     const message1: string = await invoke("greet", { name });
     const message2: string = await invoke("counter", { count });
     // Rust側の関数の戻り値を表示させる
