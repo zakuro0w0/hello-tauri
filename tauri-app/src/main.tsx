@@ -6,6 +6,6 @@ import "./style.css";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <LifeGame />
+    <App />
   </React.StrictMode>
 );
